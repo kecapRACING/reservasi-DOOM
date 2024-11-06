@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Reservasi Ruangan Kelas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="videoplayback (1).mp4" type="video/mp4">
+        Browser Anda tidak mendukung video tag.
+    </video>
+    <h1>Reservasi Ruangan Kelas</h1>
+    <section id="room-list">
+        <h2>Daftar Ruangan</h2>
+        <table id="roomTable">
+            <thead>
+                <tr>
+                    <th>Nomor Ruangan</th>
+                    <th>Kapasitas</th>
+                    <th>Ketersediaan</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="reservation-form">
+        <h2>Formulir Reservasi</h2>
+        <form id="bookingForm">
+            <label>Nama Pemesan: <input type="text" id="name" required></label><br>
+            <label>Nomor Ruangan: <input type="number" id="roomNumber" required></label><br>
+            <label>Tanggal Reservasi: <input type="date" id="date" required></label><br>
+            <label>Waktu Mulai: <input type="time" id="startTime" required></label><br>
+            <label>Durasi (jam): <input type="number" id="duration" required></label><br>
+            <button type="button" onclick="makeReservation()">Pesan</button>
+        </form>
+    </section>
+
+    <section id="reservation-list">
+        <h2>Daftar Reservasi</h2>
+        <table id="reservationTable">
+            <thead>
+                <tr>
+                    <th>Nama Pemesan</th>
+                    <th>Nomor Ruangan</th>
+                    <th>Tanggal</th>
+                    <th>Waktu</th>
+                    <th>Durasi</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

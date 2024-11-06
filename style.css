@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(40%);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    color: #fff;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    width: 90%;
+    max-width: 800px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+}
+
+th {
+    background: linear-gradient(135deg, #007399, #004d66);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+td {
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tr:hover {
+    background-color: #e0f7fa;
+}
+
+#reservation-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#reservation-form label {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1em;
+}
+
+#reservation-form input[type="text"],
+#reservation-form input[type="number"],
+#reservation-form input[type="date"],
+#reservation-form input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+#reservation-form input[type="text"]:focus,
+#reservation-form input[type="number"]:focus,
+#reservation-form input[type="date"]:focus,
+#reservation-form input[type="time"]:focus {
+    border-color: #007399;
+    outline: none;
+}
+
+button {
+    background: linear-gradient(135deg, #007399, #004d66);
+    color: #fff;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 115, 153, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #005c73, #003d4c);
+    transform: scale(1.05);
+}
+
+#reservationTable button {
+    background: #e57373;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+#reservationTable button:hover {
+    background-color: #c62828;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
